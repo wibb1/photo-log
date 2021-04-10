@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Title from "./Title";
-import Photowall from "./PhotoWall";
-import AddPhoto from "./AddPhoto";
+import Photowall from "./PhotoWall-hooks";
+import AddPhoto from "./AddPhoto-hooks";
 import { Route } from "react-router-dom";
 
 class Main extends Component {

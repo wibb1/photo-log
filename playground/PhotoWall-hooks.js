@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Photo from "./Photo";
+import Photo from "./Photo-hooks";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 class Photowall extends Component {
