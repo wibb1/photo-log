@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 class Photowall extends Component {
   render() {
-    console.log(this.props.posts);
     return (
       <div>
         <Link className="add-icon" to="/AddPhoto"></Link>

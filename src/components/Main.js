@@ -9,7 +9,6 @@ class Main extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <h1><Link to='/'>Photowall</Link></h1>
