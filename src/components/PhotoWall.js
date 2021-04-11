@@ -5,16 +5,17 @@ import { Link } from "react-router-dom";
 
 class Photowall extends Component {
   render() {
+    const props = this.props;
     return (
       <div>
         <Link className="add-icon" to="/AddPhoto"></Link>
         <div className="photo-grid">
-          {this.props.posts
+          {props.posts
             .sort(function (x, y) {
               return y.id - x.id;
             })
             .map((post, index) => (
-              <Photo key={post.id} post={post} {...this.props} index={index} />
+              <Photo key={post.id} post={post} {...props} index={index} />
             ))}
         </div>
       </div>

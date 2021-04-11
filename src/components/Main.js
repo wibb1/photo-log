@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
 import Photowall from "./PhotoWall";
 import AddPhoto from "./AddPhoto";
+import { Route, Link } from "react-router-dom";
+import Single from "./Single";
 
 class Main extends Component {
   constructor() {
@@ -11,7 +12,9 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <h1><Link to='/'>Photowall</Link></h1>
+        <h1>
+          <Link to="/">Photowall</Link>
+        </h1>
         <Route
           exact
           path="/"
@@ -21,17 +24,14 @@ class Main extends Component {
             </div>
           )}
         />
-        {
-          <Route
-            path="/AddPhoto"
-            render={() => (
-              <AddPhoto {...this.props} />
-            )}
-          />
-        }
+        <Route path="/AddPhoto" render={({history}) => <AddPhoto {...this.props} onHistory={history}/>} />
+        <Route
+          path="/single/:id"
+          render={(params) => <Single {...this.props} {...params} />}
+        />
       </div>
     );
   }
 }
-//, history.push('/')
+
 export default Main;
