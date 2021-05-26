@@ -7,7 +7,7 @@ import Single from "./Single";
 class Main extends Component {
 state = {loading: true}
 componentDidMount(){
-  this.props.startLoadingPost().then(() => {
+  this.props.startLoadingPosts().then(() => {
     this.setState({loading: false})
   })
   this.props.startLoadingComments()

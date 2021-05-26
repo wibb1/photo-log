@@ -6,9 +6,9 @@ class Single extends Component {
   render() {
     const { match, posts } = this.props;
     const id = Number(match.params.id);
-    const post = posts.find((post) => post.id === id);
+    const post = posts.find((npost) => npost.id === id);
     const comments = this.props.comments[match.params.id] || [];
-    const index = this.props.posts.findIndex((post) => post.id === id);
+    const index = this.props.posts.findIndex((ipost) => ipost.id === id);
     if (this.props.loading === true) {
       return <div className="loader">...loading</div>;
     } else if (post) {
@@ -16,7 +16,7 @@ class Single extends Component {
         <div className="single-photo">
           <Photo post={post} {...this.props} index={index}></Photo>
           <Comments
-            addComment={this.props.addComment}
+            startAddingComments={this.props.startAddingComments}
             comments={comments}
             id={id}
           ></Comments>

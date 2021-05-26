@@ -1,6 +1,6 @@
 import { database } from "../database/config";
 
-export function startAddingPost(post) {
+export function startAddingPosts(post) {
   return (dispatch) => {
     return database
       .ref("posts")
@@ -12,7 +12,7 @@ export function startAddingPost(post) {
   };
 }
 
-export function startLoadingPost() {
+export function startLoadingPosts() {
   return (dispatch) => {
     return database
       .ref("posts")
@@ -30,7 +30,7 @@ export function startLoadingPost() {
   };
 }
 
-export function startRemovingPost(index, id) {
+export function startRemovingPosts(index, id) {
   const updates = {
     [`posts/${id}`]: null,
     [`comments/${id}`]: null
@@ -48,7 +48,7 @@ export function startRemovingPost(index, id) {
   };
 }
 
-export function startAddingComment(comment, postId) {
+export function startAddingComments(comment, postId) {
   return (dispatch) => {
     return database
       .ref("comments/" + postId)
