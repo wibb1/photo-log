@@ -1,3 +1,9 @@
+This was a simple app to learn more about working with Redux and review some of the challenges of working with React.  Integrated a Firebase backend and used comment storage.
+
+![Home Page](/Screenshots/ScreenShot1.png)
+
+![Home Page](/Screenshots/ScreenShot2.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
