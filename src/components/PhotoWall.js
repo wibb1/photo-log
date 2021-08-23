@@ -15,7 +15,7 @@ class Photowall extends Component {
               return y.id - x.id;
             })
             .map((post, index) => (
-              <Photo key={post.id} post={post} {...props} index={index} />
+              <Photo key={index} post={post} {...props} index={index} />
             ))}
         </div>
       </div>
